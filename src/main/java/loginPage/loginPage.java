@@ -13,7 +13,7 @@ public class loginPage {
 
     By userNameTxtBox = By.name("username");
     By passTxtBox = By.name("password");
-    By loginBtn = By.xpath("//button[text() = \"LOGIN\"]");
+    By loginBtn = By.xpath("//div[@role='button']");
     By errMesgUser = By.xpath("//div/span[contains(text(), 'Username wajib diisi')]");
     By errMesgPass = By.xpath("//div/span[contains(text(), 'Password wajib diisi')]");
 
