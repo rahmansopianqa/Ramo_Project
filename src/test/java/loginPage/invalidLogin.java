@@ -24,6 +24,8 @@ public class invalidLogin extends WebDriverController {
 
         assertEquals("Wrong Password or Username");
 
+        driver.close();
+
     }
 
     private static void assertEquals(String wrong_password_or_username) {

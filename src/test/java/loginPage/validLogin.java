@@ -22,5 +22,7 @@ public class validLogin extends WebDriverController {
         loginPage.setPassTxtBox("ramo@123!@#");
         loginPage.clickLoginBtn();
 
+        driver.close();
+
     }
 }
