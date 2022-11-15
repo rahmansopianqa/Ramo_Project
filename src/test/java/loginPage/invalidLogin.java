@@ -1,13 +1,15 @@
 package loginPage;
 
 import org.junit.Assert;
+import org.junit.Test;
 import setupMethod.WebDriverController;
 
 import static org.junit.Assert.assertEquals;
 
 public class invalidLogin extends WebDriverController {
 
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void invalidLogin() throws Exception {
         String browser = "chrome";
         WebDriverController.setup(browser);
 

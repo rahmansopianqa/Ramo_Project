@@ -1,12 +1,14 @@
 package loginPage;
 
 
+import org.junit.Test;
 import setupMethod.WebDriverController;
 //Scenario :
 //as user i want to login using valid username and password
 public class validLogin extends WebDriverController {
 
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void validLogin() throws Exception {
         String browser = "chrome";
         WebDriverController.setup(browser);
 
@@ -19,8 +21,6 @@ public class validLogin extends WebDriverController {
         loginPage.setUserNameTxtBox("admin@local");
         loginPage.setPassTxtBox("ramo@123!@#");
         loginPage.clickLoginBtn();
-
-        driver.quit();
 
     }
 }
