@@ -1,7 +1,7 @@
 package loginPage;
 
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import setupMethod.WebDriverController;
 //Scenario :
 //as user i want to login using valid username and password
