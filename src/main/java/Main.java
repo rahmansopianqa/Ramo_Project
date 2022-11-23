@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+
+//page_Url = https://apg-stagingramo.barransdemo.com/
 public class Main {
 
     public static void main (String[] args) {
