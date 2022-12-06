@@ -11,8 +11,8 @@ public class loginPage {
         this.driver = driver;
     }
 
-    By userNameTxtBox = By.name("username");
-    By passTxtBox = By.name("password");
+    By userNameTxtBox = By.xpath("//input[@type='text']");
+    By passTxtBox = By.xpath("//input[@type='password']");
     By loginBtn = By.xpath("//div[@role='button']");
     By errMesgUser = By.xpath("//div/span[contains(text(), 'Username wajib diisi')]");
     By errMesgPass = By.xpath("//div/span[contains(text(), 'Password wajib diisi')]");

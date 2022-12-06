@@ -19,7 +19,7 @@ public class validLogin extends WebDriverController {
         loginPage loginPage = new loginPage(driver);
 
         loginPage.setUserNameTxtBox("admin@local");
-        loginPage.setPassTxtBox("ramo@123!@#");
+        loginPage.setPassTxtBox("ffdf3f037a9e11091302a763c2fb2c17");
         loginPage.clickLoginBtn();
 
         driver.close();
