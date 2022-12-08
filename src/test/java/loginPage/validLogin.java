@@ -1,28 +1,45 @@
 package loginPage;
 
 
+import dashboardPage.dashboardPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import setupMethod.WebDriverController;
-//Scenario :
-//as user i want to login using valid username and password
+//SC01 Login Berhasil
+//TC01 Login dengan username dan password sesuai
 public class validLogin extends WebDriverController {
-
-    @Test
-    public void validLogin() throws Exception {
+    @BeforeClass
+    public void setup() throws Exception {
         String browser = "chrome";
         WebDriverController.setup(browser);
 
         String baseUrl = "https://apg-stagingramo.barransdemo.com/";
         driver.get(baseUrl);
 
+    }
+    @Test (priority = 1)
+    public void validLogin() throws Exception {
+
         //Create loginPage Object
         loginPage loginPage = new loginPage(driver);
+        dashboardPage dashboardPage = new dashboardPage(driver);
 
         loginPage.setUserNameTxtBox("admin@local");
-        loginPage.setPassTxtBox("ffdf3f037a9e11091302a763c2fb2c17");
+        loginPage.setPassTxtBox("ramo@123!@#");
         loginPage.clickLoginBtn();
 
-        driver.close();
-
+        WebElement dashboard = driver.findElement(By.xpath("//div[@class='mb-6']"));
+        Assert.assertTrue(dashboard.isDisplayed(),
+                "Dashboard not displayed");
     }
+
+    @AfterClass
+    public void quit() {
+        driver.close();
+    }
+
 }

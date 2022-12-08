@@ -26,7 +26,9 @@ public class WebDriverController {
         //Check if parameter passed as 'chrome'
         else if(browser.equalsIgnoreCase("chrome"))
         {
-            System.setProperty("webdriver.chrome.driver", "D:\\driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","D:\\driver\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
             driver = new ChromeDriver();
         }
 

@@ -14,8 +14,8 @@ public class loginPage {
     By userNameTxtBox = By.xpath("//input[@type='text']");
     By passTxtBox = By.xpath("//input[@type='password']");
     By loginBtn = By.xpath("//div[@role='button']");
-    By errMesgUser = By.xpath("//div/span[contains(text(), 'Username wajib diisi')]");
-    By errMesgPass = By.xpath("//div/span[contains(text(), 'Password wajib diisi')]");
+    By errMesgUser = By.xpath("//div/span[contains(text(), 'Wrong Password or Username')]");
+    By errMesgPass = By.xpath("//div/span[contains(text(), 'Wrong Password or Username')]");
 
     public void setUserNameTxtBox (String username){
         driver.findElement(userNameTxtBox).sendKeys(username);
@@ -50,8 +50,11 @@ public class loginPage {
     }
 
     public void validLogin () {
-        setUserNameTxtBox("admin@myrepublic.co.id");
-        setPassTxtBox("P@ssw0rd");
+        setUserNameTxtBox("admin@local");
+        setPassTxtBox("ramo@123!@#");
         clickLoginBtn();
+    }
+
+    public void errMesgPass() {
     }
 }
