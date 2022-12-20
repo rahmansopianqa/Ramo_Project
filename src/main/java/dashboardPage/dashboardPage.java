@@ -11,9 +11,9 @@ public class dashboardPage {
         this.driver = driver;
     }
 
-    By titleDashboard = By.xpath("//div[@class='mb-6']");
+    By titleDashboard = By.xpath("//div[@class='font-bold text-base'][normalize-space()='Dashboard']");
     
-    public void setTitleDashboard(String dashboard) { driver.findElement(titleDashboard).sendKeys(dashboard);
+    public void setTitleDashboard() { driver.findElement(titleDashboard).isDisplayed();
     }
 
 }

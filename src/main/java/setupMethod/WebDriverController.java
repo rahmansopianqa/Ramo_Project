@@ -29,7 +29,7 @@ public class WebDriverController {
             System.setProperty("webdriver.chrome.driver","D:\\driver\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
         }
 
         //Check if parameter passed as 'Edge'

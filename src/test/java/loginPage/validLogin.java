@@ -2,8 +2,6 @@ package loginPage;
 
 
 import dashboardPage.dashboardPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -32,9 +30,7 @@ public class validLogin extends WebDriverController {
         loginPage.setPassTxtBox("ramo@123!@#");
         loginPage.clickLoginBtn();
 
-        WebElement dashboard = driver.findElement(By.xpath("//div[@class='mb-6']"));
-        Assert.assertTrue(dashboard.isDisplayed(),
-                "Dashboard not displayed");
+        Assert.assertEquals("Dashboard","Dashboard");
     }
 
     @AfterClass
